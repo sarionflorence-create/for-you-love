@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Nunito+Hand:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/png" href="image/favicon.png"> 
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>For the Girl Who Makes My World Bright</title>
+  <link rel="stylesheet" href="style.css">
+
+
+  </head>
+<body>
+  <div class="wrap">
+    <header>
+      <div class="circle">
+        <img src="image/nianie.jpg" alt="Nianie's photo" class="profile-pic">
+      </div>
+      <div>
+        <h1>For Nianie <span class="heart">❤️</span></h1>
+        <p class="lead">
+          A little website I made just for you — a place for letters, reasons, and memories. Enjoy po!  
+        </p>
+      </div>
+    </header>
+
+
+    <nav>
+      <button class="nav-btn active" data-target="home">Home</button>
+      <button class="nav-btn" data-target="letter">Letter</button>
+      <button class="nav-btn" data-target="reasons">Reasons</button>
+      <button class="nav-btn" data-target="memories">Memories</button>
+      <button class="nav-btn" data-target="timeline">Timeline</button>
+      <button class="nav-btn" data-target="humpy-card">Baby</button>
+      <button class="nav-btn" data-target="bgmusic">Music</button>
+    </nav>
+
+    <!-- HOME -->
+    <section id="home" class="card">
+      <div class="welcome">
+        <div>
+          <h2>Hello my love 🌸</h2>
+          <p class="intro">This is your little corner on the web. You can read a letter I wrote, see reasons why I love you, browse my photos, and remember our wholesome moments. I hope this makes you smile — open anything you want.</p>
+          <div style="margin-top:12px">
+            <button class="btn" onclick="scrollToSection('letter')">Open the letter</button>
+            <button class="btn" style="background:var(--pink);margin-left:8px" onclick="scrollToSection('memories')">See memories</button>
+          </div>
+        </div>
+
+        <div style="text-align:center">
+          <div class="color-box card" id="cover-box"
+                style="background:linear-gradient(135deg,var(--pink),var(--cream));
+                width: 300px;
+                height: 240px;
+                padding: 28px;
+                border-radius: 18px;
+                margin: auto;">
+            <div>
+              <div style="font-size:22px; font-weight:bold; margin-bottom:10px;">
+                Your Baby ❤️
+              </div>
+                 <div id="nianie-name" style="cursor:pointer; display:flex; justify-content:center;">
+                  <img src="image/polen.jpg" alt="My Photo"
+                  style="
+                    width:130px;
+                    height:130px;
+                    object-fit:cover;
+                    border-radius:16px; /* this makes it SQUARE with soft corners */
+                    box-shadow:
+                      0 0 12px rgba(255,182,193,0.7),
+                      0 0 28px rgba(255,182,193,0.4),
+                      0 0 48px rgba(255,182,193,0.25);
+                    transition:transform 0.35s, box-shadow 0.35s;">
+                </div>
+          <p class="muted" style="margin-top:12px;font-size:13px">Hi, baby! This is your favorite picture of me kaya dapat bungad siya</p>  
+        </div>
+      </div>
+    </section>
+
+    <!-- Letter -->
+    <section id="letter" class="card">
+      <h3>💌 My letter for you, baby</h3>
+      <div class="letter">
+        <div class="typing" id="letter-text">(Click mo po yung button, baby)</div>
+      </div>
+      <div style="margin-top:12px">
+        <button class="btn" id="reveal-letter">Reveal the letter</button>
+        <button class="btn" style="background:var(--pink)" id="replay-letter">Replay</button>
+      </div>
+    </section>
+
+    <!-- Reasons -->
+    <section id="reasons" class="card">
+      <h3>❤️ Reasons why I love you</h3>
+      <div class="reasons" id="reasons-list">
+        <!-- reasons will be injected here -->
+      </div>
+      <div style="margin-top:12px" class="reveal-controls">
+        <button class="btn" id="next-reason">Show next reason</button>
+        <div class="muted">Shown <span id="reason-counter">0</span> of <span id="reason-total">0</span></div>
+      </div>
+    </section>
+
+    <!-- Memories -->
+    <section id="memories" class="scrapbook-card">
+      <h2>📸 Our Pictures</h2>
+      <p class="intro">Ito na muna sa ngayon. But, I hope someday we can have our photos together.</p>
+
+      <div class="scrapbook-gallery">
+        <img src="image/nianie.jpg" alt="Memory 1">
+        <img src="image/nianie2.jpg" alt="Memory 3">
+        <img src="image/nianie3.jpg" alt="Memory 4">
+        <img src="image/nini.jpg" alt="Memory 5">
+        <img src="image/nini1.jpg" alt="Memory 6">
+        <img src="image/nini2.jpg" alt="Memory 7">
+        <img src="image/nini3.jpg" alt="Memory 8">
+        <img src="image/nini4.jpg" alt="Memory 9">
+        <img src="image/nini5.jpg" alt="Memory 10">
+        <img src="image/nini6.jpg" alt="Memory 11">
+        <img src="image/nini7.jpg" alt="Memory 12">
+        <img src="image/nini8.jpeg" alt="Memory 13">
+        <img src="image/nini9.jpeg" alt="Memory 14">
+      </div>
+      <!-- Stickers for decoration -->
+        <img class="sticker heart" src="https://cdn-icons-png.flaticon.com/512/9627/9627266.png">
+        <img class="sticker star" src="https://cdn-icons-png.flaticon.com/512/9385/9385060.png">
+        <img class="sticker sparkle" src="https://png.pngtree.com/png-clipart/20230103/ourmid/pngtree-pink-ribbon-and-sparkles-sticker-set-png-image_6549652.png">
+        <img class="sticker bow" style="bottom:10px; left:20px;" src="https://png.pngtree.com/png-vector/20240914/ourmid/pngtree-d-pink-bows-ribbon-banner-isolated-clipart-icon-on-transparent-background-png-image_13830807.png">
+        <img class="sticker bunny" style="top:30px; left:-10px;" src="hhttps://www.pikpng.com/pngl/m/299-2996783_kawaii-bunny-download-free-clipart-with-a-transparent.png">
+    </section>
+
+    <!-- Timeline -->
+    <section id="timeline" class="scrapbook-card">
+  <h2>🧸 Our Wholesome Timeline</h2>
+  <p class="soft-note">Mga moments that means so much to us.</p>
+
+  <div class="timeline-fixed">
+
+    <div class="time-entry">
+      <img src="image/ss1.PNG" class="tl-pic">
+      <div class="tl-text">
+        <h4>Day we started talking</h4>
+        <p>I never expected that this message of mine would change everything between us. At first, my intention was really just to have someone to talk to—someone who could listen, someone I could ask for advice about the decisions I was making in life. I didn’t think too much of it. It was supposed to be simple, casual, nothing special.<br> <br> Pero habang tumatagal, something shifted. Our conversations didn’t feel forced. They weren’t just small talk. They felt natural—like we already understood each other long before we even tried to. I found myself looking forward to your replies, waiting for your name to pop up on my screen, and smiling at messages I never thought would matter so much.<br> <br> Little by little, talking to you became a habit. A comfort. A part of my day I didn’t want to skip. I didn’t notice it at first, but you started to hold a place in my life that I didn’t expect anyone to fill. You were supposed to just be a person I talk to… yet somehow, you became someone I didn’t want to lose. <br> <br> And that’s the part that surprised me the most. <br> From a simple message… everything changed. <br> <br> And honestly, I’m grateful that it did.</p>
+      </div>
+    </div>
+
+    <div class="time-entry">
+      <img src="image/ss6.jpg" class="tl-pic">
+      <div class="tl-text">
+        <h4>The calls we never wanted to end.</h4>
+        <p>Every call that lasted for almost 12 hours—those moments we never wanted to end. I still think about how strange and beautiful it is… how something so simple like a late-night call can become one of my favorite parts of our story. I don't even know why you always wanted to call, especially knowing that at first, you really didn’t like phone calls. To be honest, same. I didn’t like it either. But there’s something about you—something about us—that made those hours feel light, natural, and comforting.<br> <br> You made me start to enjoy the things I used to hate. Alam mo naman na hindi ko talaga gusto ang boses ko, and I always felt shy about it. Pero ikaw? You didn’t just accept it—you made me like it. You made me love something about myself that I used to be insecure about. And I think that’s one of the things I treasure the most about you. You make the uncomfortable feel safe. You make the ordinary feel warm. And you make me feel seen, heard, and understood in a way I didn’t think was possible. <br> <br> So every time we talk, every time you say, “Call?” even if it's late or we’re tired—I say yes. Not because of the call itself, but because it’s with you. And those hours… those laughs… those quiet moments… they’re something I never want to end either. </p>
+      </div>
+    </div>
+
+    <div class="time-entry">
+      <img src="image/ss3.PNG" class="tl-pic">
+      <div class="tl-text">
+        <h4>The FIRST TIME that YOU FLIRTED with me</h4>
+        <p>Sabi ko sa sarili ko tropa lang — as in literal, friends lang, walang halo. Pero bigla mo na lang akong nilandi. At hindi ko alam kung matatawa ba ako o kikiligin sa sarili ko that time. Pero diba I admitted to you naman na you caught my attention since the very beginning. Pero hindi ko lang sinabi kasi we were young, busy sa studies, and parang wala pa talaga sa timing ang lahat.<br> <br> We had interactions, yes. Nagkakausap tayo, nagbibiruan sa comsec. Pero hindi tayo yung tipong madalas mag-chat. Ako pa nga yung una at huling nag-chat and then seen na ang ending. I really thought na hanggang dun lang tayo—just two people who know each other, comfortable enough to talk, but not close enough to build something more.<br> <br> I never expected that one day, everything would shift. Na yung simpleng biruan, yung “kailan kaya mag lelevel-up relasyon natin” na linya, is mag lelevel-up talaga HAHAHAHA. Hindi ko inakalang from being just friends, we'd end up here—choosing each other, being part of each other's lives in ways I didn’t see coming.<br> <br> And galing, no? Sometimes the things we never planned are the ones that turn out to mean the most. <br> <br> And honestly… I’m glad na nilandi mo ako.</p>
+      </div>
+    </div>
+
+    <div class="time-entry">
+      <img src="image/ss4.PNG" class="tl-pic">
+      <div class="tl-text">
+        <h4>The First "I love You"</h4>
+        <p>I still can’t forget the first time we exchanged I love you’s. It didn’t feel rushed, it didn’t feel unsure — it felt real. Maybe ako nga yung nauna nagsabi ng “I love you,” pero ikaw ang unang nahulog. Ikaw yung unang nag-open nang totoo, nang walang takot, nang buong puso. <br> I can't forget this — “Please payagan mo akong mahalin ka.”<br> <br> And something about those words stayed with me. Hindi siya basta linya lang. Hindi siya basta sweet moment. It was you, choosing me. You, asking to stay. You, asking to love freely.<br> <br> And right there, in that exact moment, I knew — iyong-iyo na ako. Buo. Hindi kalahati. Hindi paunti-unti. Buo. <br> <br> It wasn’t dramatic. It wasn’t loud. But it was deep — and it was ours.<br> <br> That first “I love you” wasn’t just a confession. It was the beginning of us choosing each other — every day, in every small and quiet way.</p>
+      </div>
+    </div>
+
+    <div class="time-entry">
+      <img src="image/ss5.PNG" class="tl-pic">
+      <div class="tl-text">
+        <h4>When I'm Undecided, You're There</h4>
+        <p>You were there during the time I wasn’t sure of myself. When I thought I was okay — when I thought kaya ko na ulit magmahal — pero hindi pa pala. I was still healing, still doubting, still scared to give my heart again. And I knew you didn’t deserve to receive only half of me. I knew you deserved something whole, something steady, something certain.<br> <br> But you stayed. <br> <br> You didn’t force me to rush. You didn’t make me choose when I wasn’t ready. Instead, you looked at me with patience — that gentle kind of patience na hindi nagsasawa. And you told me, “gusto kitang mahalin sa way na deserve mo.” <br> <br> Those words… they softened everything inside me.<br> <br> You didn’t just want to love me — you wanted to love me right. <br> <br> You wanted to love me in a way that wouldn’t hurt, in a way that would heal, in a way that felt safe. <br> <br> And that’s when I realized:<br> <br> It wasn’t that I couldn’t love.<br> I just needed someone who would hold me carefully. <br> And you did.<br> <br> You stayed even when it was messy. <br> You stayed even when I was unsure. <br> You stayed even when loving me meant waiting. <br> <br> And that’s when I knew — <br> your love isn't loud, or rushed, or demanding. <br> Your love is patient. <br> Your love is gentle. <br> Your love chooses me, not just once, but every time.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Stickers -->
+  <img class="sticker heart" src="image/book.png">
+  <img class="sticker bow" src="image/flower.png">
+  <img class="sticker sparkle" src="image/letter.png">
+
+</section>
+
+
+    <!-- HUMPY DUMPY — Baby Teddy Mini (Style 1) -->
+<section id="humpy-card" class="card">
+  <h2>Humpy Dumpy 🧸</h2>
+  <p class="soft-note">Hi, momma! I'm humpy your favorite baby. I love you but mommy loves you more! Play with me!</p>
+
+  <div class="humpy-wrap">
+    <div id="humpy" class="humpy" title="Tap Humpy Dumpy">
+      <img src="image/humpy.png" alt="Humpy Dumpy" class="humpy-img">
+    </div>
+
+    <div id="humpy-bubble" class="humpy-bubble" aria-live="polite">Hi momma 💗 Tap me!</div>
+  </div>
+
+  <div class="humpy-controls">
+    <button id="cuddle-btn" class="btn">Cuddle 🤗</button>
+    <button id="kiss-btn" class="btn" style="background:var(--pink)">Kiss 💋</button>
+    <button id="reset-humpy" class="btn" style="background:#eee;color:#333">Reset</button>
+  </div>
+
+  <div class="humpy-status">
+    <div>Happiness: <span id="humpy-happy">0</span>/100</div>
+    <div class="meter"><div id="humpy-meter"></div></div>
+  </div>
+
+</section>
+
+
+    <footer class="card music-footer">
+  <div style="display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap">
+    <div>Made with ❤️ just for you baby ko</div>
+    <div class="muted">Enjoy listening mahal! 🎶</div>
+  </div>
+
+  <div style="margin-top:12px;text-align:center;">
+    <audio id="bgmusic" controls style="width:100%;"></audio>
+  </div>
+</footer>
+
+
+
+<script src="humpy.js"></script>
+<script src="script.js"></script>
+</body>
+</html>
+
